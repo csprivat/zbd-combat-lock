@@ -12,6 +12,8 @@ Todas as mudanças relevantes do projeto serão registradas neste arquivo.
 - preserva a prioridade de pausa e diálogos modais sobre a nova ação;
 - restaura em memória a preferência original de `toggleToAim` ao desconectar;
 - mantém combate, stamina, alcance, animações e rede sob controle nativo.
+- documenta o conflito entre cópias manual e da Oficina com o mesmo ID;
+- adiciona créditos de autoria e licença aos arquivos de código e ao pacote.
 
 ## 0.2.1 — 2026-10-01
 

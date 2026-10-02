@@ -5,5 +5,3 @@ dev-local.ps1
 diagnostics/
 dist/
 assets/workshop/preview-option-b.png
-tools/install-dev.ps1
-tools/collect-logs.ps1

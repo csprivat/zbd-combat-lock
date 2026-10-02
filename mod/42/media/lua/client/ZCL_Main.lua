@@ -1,3 +1,9 @@
+-- Zbd Combat Lock
+-- Author: Cristian Privat - privat.tecnologia@gmail.com
+-- Copyright (c) 2026 Cristian Privat
+-- SPDX-License-Identifier: MIT
+-- License: MIT; see LICENSE in the project source and distribution.
+
 -- Load the shared namespace and state helpers before registering event hooks.
 require "ZCL_State"
 

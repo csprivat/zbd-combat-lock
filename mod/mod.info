@@ -1,6 +1,6 @@
 name=Zbd Combat Lock
 id=ZbdCombatLock
-author=Cristian
+author=Cristian Privat
 description=Toggle persistent aiming with Left Ctrl, or disable it at runtime to use native held-key combat.
 poster=poster.png
 modversion=0.3.0

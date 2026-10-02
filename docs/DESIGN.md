@@ -100,6 +100,17 @@ rede próprios. O teste funcional inicial pode ser feito em uma partida local.
 A compatibilidade com a política de mods de um servidor privado deve ser
 validada separadamente antes de distribuição.
 
+## Identidade, autoria e licença
+
+O projeto e os pacotes publicados usam o ID estável `ZbdCombatLock`. Uma cópia
+manual e a cópia da Oficina não devem ser carregadas juntas, pois possuem a
+mesma identidade e uma pode sobrescrever a outra.
+
+Autor: Cristian Privat — privat.tecnologia@gmail.com. Copyright © 2026 Cristian
+Privat. Código distribuído sob a licença MIT; os arquivos executáveis Lua e
+PowerShell contêm cabeçalhos SPDX e o pacote de distribuição inclui uma cópia
+de `LICENSE`.
+
 ## Estrutura Build 42
 
 `mod/mod.info` permite que o gerenciador descubra o mod. A implementação e os

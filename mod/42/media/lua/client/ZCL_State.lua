@@ -1,3 +1,9 @@
+-- Zbd Combat Lock
+-- Author: Cristian Privat - privat.tecnologia@gmail.com
+-- Copyright (c) 2026 Cristian Privat
+-- SPDX-License-Identifier: MIT
+-- License: MIT; see LICENSE in the project source and distribution.
+
 -- Keep the namespace stable across Lua reloads and avoid polluting globals with
 -- individual functions. ZCL_Main.lua consumes the public functions below.
 ZbdCombatLock = ZbdCombatLock or {}

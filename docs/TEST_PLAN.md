@@ -4,16 +4,23 @@
 
 - Project Zomboid `42.21.0` ou versão compatível da linha Build 42;
 - **Zbd Combat Lock** ativo no gerenciador e no save;
+- somente uma cópia com o ID `ZbdCombatLock` instalada: manual ou Oficina;
 - ação **Mira** atribuída ao `Ctrl esquerdo`;
 - ação **Zbd Combat Lock** atribuída a `F8` ou outra tecla conhecida;
 - jogo reiniciado depois de qualquer alteração nos arquivos Lua;
 - arma equipada na mão principal.
+
+Antes de validar um pacote manual, cancele temporariamente a inscrição do item
+`3811449205` na Oficina, reinicie o jogo e confirme no `console.txt` que a linha
+de carregamento informa a versão `0.3.0`.
 
 ## Casos principais
 
 | Caso | Ação | Resultado esperado |
 |---|---|---|
 | Inicialização | Entrar na partida | Sem janela de erro; combate começa desligado |
+| Versão carregada | Consultar `console.txt` | Registro `[ZbdCombatLock] 0.3.0 carregado` |
+| Atribuição | Abrir as atribuições de teclas | Categoria `Zbd Combat Lock` visível e ação atribuída |
 | Ativar | Tocar e soltar Ctrl esquerdo | Postura de mira persistente e indicador visível |
 | Movimento | Usar WASD com combate ativo | Movimento nativo com direção voltada ao cursor |
 | Ataque | Clicar o botão esquerdo com arma equipada | Ataque nativo é executado |

@@ -8,7 +8,7 @@ partida para retornar imediatamente à mira nativa com a tecla mantida.
 ## Estado do projeto
 
 A versão `0.2.1` foi validada manualmente no Project Zomboid `42.21.0`. A
-funcionalidade da versão `0.3.0` aguarda validação dentro do jogo.
+funcionalidade da versão `0.3.0` está pronta para a validação dentro do jogo.
 
 O mod está disponível na
 [Oficina Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3811449205).
@@ -51,6 +51,23 @@ remapeada.
 A escolha vale somente para a sessão atual. Uma nova partida começa com o ZCL
 habilitado. A tecla não é processada quando o jogo está pausado ou exibe um
 diálogo modal.
+
+## Testar uma versão de desenvolvimento
+
+A cópia manual e a cópia da Oficina usam o mesmo ID `ZbdCombatLock`. Não deixe
+as duas ativas simultaneamente: a ordem de carregamento pode fazer a versão da
+Oficina sobrescrever a versão de teste sem que o menu de mods deixe isso claro.
+
+Para testar um pacote manual:
+
+1. cancele temporariamente a inscrição do item `3811449205` na Oficina;
+2. feche completamente o jogo;
+3. extraia `ZbdCombatLock` para `%USERPROFILE%\Zomboid\mods`;
+4. abra o jogo, ative a cópia manual e reinicie quando solicitado;
+5. confirme no `console.txt` a linha `[ZbdCombatLock] 0.3.0 carregado`.
+
+Depois da validação, remova a cópia manual antes de assinar novamente a versão
+publicada.
 
 ## Como funciona
 
@@ -139,5 +156,8 @@ Build 42 fica dentro de `42/`.
 - [Histórico de versões](CHANGELOG.md)
 
 ## Licença
+
+Criado por **Cristian Privat — privat.tecnologia@gmail.com**.
+Copyright © 2026 Cristian Privat.
 
 Distribuído sob a licença MIT. Consulte [LICENSE](LICENSE).
