@@ -1,0 +1,7 @@
+name=Zbd Combat Lock
+id=ZbdCombatLock
+description=Toggle persistent mouse aiming with Left Ctrl while preserving native Build 42 combat.
+poster=poster.png
+modversion=0.2.1
+versionMin=42.21.0
+author=Cristian
