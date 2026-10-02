@@ -50,6 +50,9 @@ criar outro.
 - remover ou desativar a cópia de desenvolvimento para evitar IDs duplicados;
 - iniciar o Build 42.21 ou superior;
 - confirmar que **Mira** está atribuída ao Ctrl esquerdo;
+- confirmar que **Zbd Combat Lock** está atribuída a F8 ou outra tecla;
+- desabilitar o ZCL e confirmar que a mira exige Ctrl esquerdo mantido;
+- reabilitar o ZCL e confirmar a alternância persistente;
 - executar os casos principais descritos em `docs/TEST_PLAN.md`;
 - conferir se não surgiram erros em `%USERPROFILE%\Zomboid\console.txt`.
 

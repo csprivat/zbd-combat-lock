@@ -2,11 +2,13 @@
 
 Mod client-side para Project Zomboid Build 42 que transforma a ação de mira em
 uma alternância persistente. Um toque em **Ctrl esquerdo** ativa a postura de
-combate; outro toque a desativa.
+combate; outro toque a desativa. A funcionalidade pode ser desligada durante a
+partida para retornar imediatamente à mira nativa com a tecla mantida.
 
 ## Estado do projeto
 
-A versão `0.2.1` foi validada manualmente no Project Zomboid `42.21.0`.
+A versão `0.2.1` foi validada manualmente no Project Zomboid `42.21.0`. A
+funcionalidade da versão `0.3.0` aguarda validação dentro do jogo.
 
 O mod está disponível na
 [Oficina Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3811449205).
@@ -14,6 +16,8 @@ O mod está disponível na
 Comportamento confirmado:
 
 - Ctrl esquerdo alterna entre combate ativo e controles normais;
+- F8 habilita ou desabilita a alternância persistente durante a partida;
+- com o ZCL desabilitado, Ctrl esquerdo precisa permanecer pressionado;
 - a postura de mira permanece ativa depois de soltar Ctrl;
 - WASD mantém o movimento nativo enquanto o personagem acompanha o cursor;
 - o botão esquerdo executa o ataque nativo;
@@ -32,11 +36,27 @@ A ação **Mira** do jogo precisa estar atribuída ao **Ctrl esquerdo**:
 O mod acompanha a atribuição real da ação Mira. Se essa ação estiver vinculada
 a outro botão, pressionar Ctrl não ativará o combate nativo.
 
+## Habilitar ou desabilitar o ZCL
+
+Pressione **F8** durante a partida para alternar a funcionalidade do mod. A
+ação `Zbd Combat Lock` aparece nas atribuições de teclas do jogo e pode ser
+remapeada.
+
+- `ZCL: HABILITADO`: Ctrl esquerdo volta a funcionar como alternância;
+- `ZCL: DESATIVADO`: a mira dura somente enquanto Ctrl esquerdo estiver
+  pressionado;
+- `ZCL: FALHA ...`: o Build 42 não aceitou a mudança e o `console.txt` deve ser
+  consultado.
+
+A escolha vale somente para a sessão atual. Uma nova partida começa com o ZCL
+habilitado. A tecla não é processada quando o jogo está pausado ou exibe um
+diálogo modal.
+
 ## Como funciona
 
-O Build 42.21 já possui a opção interna `toggleToAim`. O mod a habilita em
-memória durante o carregamento do Lua, antes da criação do jogador, e deixa o
-próprio jogo processar mira, direção, ataque e prioridade de entrada.
+O Build 42.21 já possui a opção interna `toggleToAim`. O mod alterna essa opção
+em memória e deixa o próprio jogo processar mira, direção, ataque e prioridade
+de entrada. Nenhuma preferência é gravada em disco.
 
 O mod não grava essa preferência em `options.ini`. O indicador é exibido apenas
 quando `IsoPlayer:isForceAim()` confirma que o modo nativo está ativo.
@@ -81,6 +101,8 @@ Reinicie completamente o jogo após substituir arquivos Lua.
 5. Mova-se com WASD e altere a direção pelo cursor.
 6. Ataque com o botão esquerdo.
 7. Toque novamente em Ctrl e confirme o retorno aos controles normais.
+8. Pressione F8, mantenha Ctrl e confirme que a mira termina ao soltar a tecla.
+9. Pressione F8 novamente e confirme o retorno da alternância persistente.
 
 Não é necessário iniciar um servidor para esse teste. A validação multiplayer
 fica separada da prova técnica client-side.
